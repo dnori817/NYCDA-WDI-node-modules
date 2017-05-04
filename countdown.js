@@ -1,9 +1,16 @@
+// function to print stars
+const printStars = function(count) {
+	for (let i = count; i > 0; i--) {
+		setTimeout(function() {
+			let star = " * ";
+			let string = "";
 
-var printStars = function(count) {
-	var star = " * ";
-	var string = "";
-	for (var i = 0; i < count; i++) {
-		console.log(string += star);
+			for (let j = 0; j < i; j++) {
+				string = string + star;
+			}
+			// random colors and style
+			console.log(string.random);
+		}, 10000 - (i * 1000));
 	}
 };
 
