@@ -1,5 +1,7 @@
+const colors = require("colors");
+
 // function to print stars
-const printStars = function(count) {
+function printStars(count) {
 	for (let i = count; i > 0; i--) {
 		setTimeout(function() {
 			let star = " * ";
@@ -10,11 +12,9 @@ const printStars = function(count) {
 			}
 			// random colors and style
 			console.log(string.random);
-		}, 10000 - (i * 1000));
+		}, count * 1000 - (i * 1000));
 	}
-};
-
-printStars(10);
+}
 
 
-module.exports = printStars();
+module.exports = printStars;
